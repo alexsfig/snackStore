@@ -1,0 +1,39 @@
+{
+  "name": "express_",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "6.3.1"
+  },
+  "scripts": {
+    "start": "node bin/www.js",
+    "test": "mocha --timeout 10000"
+  },
+  "apidoc": {
+    "title": "Users API",
+    "url": "http://localhost:8000/api/v1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apidoc": "^0.17.6",
+    "bcrypt": "^2.0.0",
+    "body-parser": "^1.18.1",
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "dotenv": "^5.0.1",
+    "express": "^4.15.4",
+    "express-useragent": "^1.0.8",
+    "jsonwebtoken": "^8.0.1",
+    "mocha": "^4.0.1",
+    "morgan": "^1.8.2",
+    "node-gcm": "^0.14.10",
+    "pg": "^6.4.2",
+    "pg-hstore": "^2.3.2",
+    "pm2": "^2.7.0",
+    "sequelize": "^4.8.3",
+    "sequelize-cli": "^3.0.0-3"
+  }
+}
