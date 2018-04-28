@@ -7,14 +7,15 @@ module.exports = (app, jwt, express) =>
 
     apiRoutes.post('/products', productsController.create)
     apiRoutes.get('/products', productsController.list)
+    apiRoutes.get('/products/:order', productsController.list)
+    apiRoutes.get('/products/:order/:orderColumn', productsController.list)
+    apiRoutes.get('/products/:id', productsController.find)
+    apiRoutes.put('/products/:id', productsController.update)
+    apiRoutes.delete('/products/:id', productsController.delete)
+    apiRoutes.post('/products/:id/like', productsController.like)
 
 
 
     app.use('/api/v1', apiRoutes);
-    app._router.stack.forEach(function(r){
-      if (r.route && r.route.path){
-        console.log(r.route.path)
-      }
-    })
 
 };
