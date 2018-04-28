@@ -26,6 +26,7 @@
     "dotenv": "^5.0.1",
     "express": "^4.15.4",
     "express-useragent": "^1.0.8",
+    "hoek": "^4.2.1",
     "jsonwebtoken": "^8.0.1",
     "mocha": "^4.0.1",
     "morgan": "^1.8.2",
