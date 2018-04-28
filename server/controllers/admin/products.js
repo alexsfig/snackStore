@@ -1,8 +1,11 @@
 const Product = require('../../models').Product;
+const jwt = require('jsonwebtoken');
 
 module.exports = {
 
 	create(req, res){
+		const token = req.body.token || req.query.token || req.headers['x-access-token'];
+		var decoded = jwt.decode(token, {complete: true});
 		if(!req.is('application/json')){
 			res.status(403).send({
 				success: false,
@@ -15,17 +18,27 @@ module.exports = {
 					success: false,
 					message: 'Expected application/json data'
 				});
-			}else{
-				return Product.create({
-					name:        data.name,
-					description: data.description,
-					stock:       data.stock,
-					price:       data.price,
-					likes:       0
-				})
-				.then(product => res.status(201).send(product))
-				.catch(error => res.status(400).send(error));
 			}
+			else{
+				if (decoded.payload.role_id !== 2) {
+					return Product.create({
+						name:        data.name,
+						description: data.description,
+						stock:       data.stock,
+						price:       data.price,
+						likes:       0
+					})
+					.then(product => res.status(201).send(product))
+					.catch(error => res.status(400).send(error));
+				}
+				else {
+					return res.status(400).send({
+		        success: false,
+		        message: 'Invalid user'
+		      });
+				}
+			}
+
 		}
 	},
 	// Retrieve all records using pagination and order
