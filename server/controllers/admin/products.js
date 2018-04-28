@@ -28,7 +28,7 @@ module.exports = {
 			}
 		}
 	},
-
+	// Retrieve all records using pagination and order
 	list(req, res){
 		// Number of records for page
 		let limit = 3;
@@ -78,10 +78,43 @@ module.exports = {
 			});
 		}
 	},
-
+	// find product by ID
 	find(req, res){
 		if(req.params.id){
 			Product.findById(req.params.id)
+			.then(product => {
+				if(!product){
+					res.status(404).send({
+						message: 'Product not found'
+					});
+				}
+				else if (product.status == false) {
+					res.status(404).send({
+						message: 'Product not found'
+					});
+				}
+				else{
+					res.status(200).send(product);
+				}
+			})
+			.catch(error => res.status(400).send(error));
+		}else{
+			res.status(404).send({
+				message: 'Product not found'
+			});
+		}
+	},
+	// find product by name, return a list of records
+	findByName(req, res){
+		if(req.params.name){
+			Product.findAll(
+				{
+					where: {
+						name: { $like: '%'+ req.params.name +'%' },
+						status: true
+					}
+				}
+			)
 			.then(product => {
 				if(!product){
 					res.status(404).send({
