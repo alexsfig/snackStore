@@ -1,4 +1,5 @@
 const productsController = require('../controllers/admin').products;
+const usersController = require('../controllers/user').users;
 
 module.exports = (app, jwt, express) =>
 {
@@ -14,6 +15,13 @@ module.exports = (app, jwt, express) =>
     apiRoutes.put('/products/:id', productsController.update)
     apiRoutes.delete('/products/:id', productsController.delete)
     apiRoutes.post('/products/:id/like', productsController.like)
+
+
+
+    /////////////
+    apiRoutes.post('/users/sign_up', usersController.create)
+
+
 
 
 
