@@ -9,3 +9,5 @@ app.set('jwt_secret', jwt_secret);
 
 const server = http.createServer(app);
 server.listen(port);
+
+console.log('Magic happens on port ' + port);
