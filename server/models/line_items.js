@@ -1,18 +1,26 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  var lineItems = sequelize.define('line_items', {
+  var LineItem = sequelize.define('LineItem', {
     product_id: DataTypes.INTEGER,
     quantity: DataTypes.INTEGER,
     total_line: DataTypes.DOUBLE,
     price: DataTypes.DOUBLE,
     purchase_order_id: DataTypes.INTEGER
-  }, {});
-  lineItems.associate = function(models) {
-    lineItems.belongsTo(models.purchaseOrder,
+  }, {
+      freezeTableName: true,
+      tableName: 'line_items'
+  });
+  LineItem.associate = function(models) {
+    LineItem.belongsTo(models.PurchaseOrder,
     {
       foreignKey: 'purchase_order_id',
       as: 'purchase_order'
     });
+    LineItem.belongsTo(models.Product,
+    {
+      foreignKey: 'product_id',
+      as: 'product'
+    });
   };
-  return lineItems;
+  return LineItem;
 };
