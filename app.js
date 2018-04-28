@@ -30,6 +30,8 @@ app.use(function(req, res, next) {
 require('dotenv').config()
 
 require('./server/routes')(app, jwt, express);
+require('./server/routes/admin.js')(app, jwt, express);
+require('./server/routes/user.js')(app, jwt, express);
 // Setup a default catch-all route that sends back a welcome message in JSON format.
 app.get('*', (req, res) => res.status(200).send({
     message: 'Welcome to SNACK STORE.',
