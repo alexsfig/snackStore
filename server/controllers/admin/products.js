@@ -31,7 +31,7 @@ module.exports = {
 	// Retrieve all records using pagination and order
 	list(req, res){
 		// Number of records for page
-		let limit = 3;
+		let limit = 10;
   	let offset = 0;
 		// selected page
 		const page = req.params.page == null ?  1 : req.params.page;
