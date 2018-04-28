@@ -9,7 +9,14 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       product_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        onDelete: 'RESTRICT',
+        onUpdate: 'RESTRICT',
+        references: {
+            model: 'Products',
+            key: 'id',
+            as: 'product',
+        },
       },
       quantity: {
         type: Sequelize.INTEGER
@@ -20,8 +27,15 @@ module.exports = {
       total_line: {
         type: Sequelize.DOUBLE
       },
-      purchase_order: {
-        type: Sequelize.INTEGER
+      purchase_order_id: {
+        type: Sequelize.INTEGER,
+        onDelete: 'RESTRICT',
+        onUpdate: 'RESTRICT',
+        references: {
+            model: 'purchase_orders',
+            key: 'id',
+            as: 'purchase_order',
+        },
       },
       createdAt: {
         allowNull: false,
