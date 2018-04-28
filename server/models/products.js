@@ -1,11 +1,29 @@
 module.exports = (sequelize, DataTypes) => {
   var Product = sequelize.define('Product', {
-    name: DataTypes.STRING,
-    description: DataTypes.STRING,
-    stock: DataTypes.INTEGER,
-    price: DataTypes.DOUBLE,
-    likes: DataTypes.INTEGER,
-    status: DataTypes.BOOLEAN
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    stock: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    price: {
+      type: DataTypes.DOUBLE,
+      allowNull: false
+    },
+    likes: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    status: {
+      type: DataTypes.BOOLEAN,
+      default: true
+    }
   },
   {
       freezeTableName: true,
