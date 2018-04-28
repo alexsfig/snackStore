@@ -1,4 +1,5 @@
 'use strict';
+const bcrypt = require('bcrypt');
 module.exports = (sequelize, DataTypes) => {
   var User = sequelize.define('User', {
     firstName: DataTypes.STRING,
@@ -40,8 +41,16 @@ module.exports = (sequelize, DataTypes) => {
     },
     role_id: DataTypes.INTEGER
   }, {});
+  User.hook('beforeCreate', (User, options) =>
+  {
+    User.password = bcrypt.hashSync(User.password, 10);
+  });
   User.associate = function(models) {
-
+    User.hasMany(models.purchaseOrder,
+    {
+      foreignKey: 'user_id',
+      as: 'purchase_order',
+    });
   };
   return User;
 };

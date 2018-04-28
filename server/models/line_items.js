@@ -5,10 +5,14 @@ module.exports = (sequelize, DataTypes) => {
     quantity: DataTypes.INTEGER,
     total_line: DataTypes.DOUBLE,
     price: DataTypes.DOUBLE,
-    purchase_order: DataTypes.INTEGER
+    purchase_order_id: DataTypes.INTEGER
   }, {});
   lineItems.associate = function(models) {
-    // associations can be defined here
+    lineItems.belongsTo(models.purchaseOrder,
+    {
+      foreignKey: 'purchase_order_id',
+      as: 'purchase_order'
+    });
   };
   return lineItems;
 };
