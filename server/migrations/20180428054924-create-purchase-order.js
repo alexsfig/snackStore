@@ -22,7 +22,7 @@ module.exports = {
         type: Sequelize.DOUBLE
       },
       status: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.ENUM('pending', 'canceled', 'completed')
       },
       order_id: {
         type: Sequelize.STRING
