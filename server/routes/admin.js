@@ -9,7 +9,7 @@ module.exports = (app, jwt, express) =>
     app.all('*', function(req, res, next)
     {
       console.error(req.url);
-      if (req.url == '/api/v1/admin/login')
+      if (!req.url.includes("/api/v1/admin"))
       {
         return next();
       }
@@ -55,10 +55,12 @@ module.exports = (app, jwt, express) =>
       }
     });
     apiRoutes.post('/products', productsController.create)
+    apiRoutes.delete('/products/:id', productsController.delete)
 
 
 
 
-    app.use('/api/v1', apiRoutes);
+
+    app.use('/api/v1/admin', apiRoutes);
 
 };
