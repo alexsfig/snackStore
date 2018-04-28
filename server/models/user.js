@@ -3,47 +3,41 @@ const bcrypt = require('bcrypt');
 module.exports = (sequelize, DataTypes) => {
   var User = sequelize.define('User', {
     firstName: {
-        type: DataTypes.STRING,
-        allowNull: false
+      type: DataTypes.STRING,
+      allowNull: false
     },
     lastName: {
-        type: DataTypes.STRING,
-        allowNull: false
+      type: DataTypes.STRING,
+      allowNull: false
     },
     email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate:
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate:
+      {
+        isEmail: true,
+        isUnique: (value, next) =>
         {
-            isEmail: true,
-            isUnique: (value, next) =>
+          var self = this;
+          User.find(
             {
-                var self = this;
-                User.find(
-                    {
-                        where:
-                        {
-                            email: value,
-                            status: true
-                        }
-                    })
-                    .then((result) =>
-                    {
-                        if (result === null)
-                        {
-                            return next()
-                        }
-                        else
-                        {
-                            return next('Email is already in use')
-                        }
-                    })
-                    .catch((err) =>
-                    {
-                        return next(err);
-                    })
+              where:
+              {
+                email: value,
+                status: true
+              }
+            })
+            .then((result) =>
+            {
+              if (result === null)
+                return next()
+              else
+                return next('Email is already in use')
             }
+          )
+          .catch((err) => { return next(err); })
         }
+      }
     },
     role_id: {
         type: DataTypes.INTEGER,
@@ -55,6 +49,12 @@ module.exports = (sequelize, DataTypes) => {
     },
 
   }, {});
+  // function to compare passwdord
+  User.prototype.comparePassword = function(password)
+  {
+      return bcrypt.compareSync(password, this.password);
+  };
+  // function to hash password before save
   User.hook('beforeCreate', (User, options) =>
   {
     User.password = bcrypt.hashSync(User.password, 10);
