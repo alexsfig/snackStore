@@ -1,0 +1,1638 @@
+{
+	"info": {
+		"name": "snackStore",
+		"_postman_id": "49861578-ad59-454a-8000-d858717b1138",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "without authentication",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"first_name\":        \"Alexander \",\n\"last_name\": \"Sosa\",\n\"email\":       \"user@bar.com\",\n\"password\":     \"foo2018\",\n\"role_id\":       2,\n\"product_id\": 16,\n\"price\": 20,\n\"quantity\": 4\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/products/",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								""
+							]
+						},
+						"description": "Get products ordered by name asc"
+					},
+					"response": [
+						{
+							"id": "5b774d88-7449-4317-b9c5-08effb5fc743",
+							"name": "Get Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"first_name\":        \"Alexander \",\n\"last_name\": \"Sosa\",\n\"email\":       \"user@bar.com\",\n\"password\":     \"foo2018\",\n\"role_id\":       2,\n\"product_id\": 16,\n\"price\": 20,\n\"quantity\": 4\n}"
+								},
+								"url": {
+									"raw": "https://snack-store.herokuapp.com/api/v1/products/",
+									"protocol": "https",
+									"host": [
+										"snack-store",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,content-type, x-access-token",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2819",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Apr 2018 03:56:55 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"b03-QDskkYyqzrwgGK4BMB1Nf2adK1w\"",
+									"name": "Etag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "Cowboy",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur",
+									"name": "Via",
+									"description": "Informs the client of proxies through which the response was sent."
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"result\":[{\"id\":58,\"name\":\"Artichokes - Knobless, White\",\"description\":\"consequat ut nulla sed accumsan felis ut at dolor quis\",\"stock\":65,\"price\":13.42,\"likes\":81,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":78,\"name\":\"Baking Powder\",\"description\":\"eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies\",\"stock\":15,\"price\":47.07,\"likes\":89,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":83,\"name\":\"Beans - Navy, Dry\",\"description\":\"massa donec dapibus duis at velit eu est congue elementum in hac\",\"stock\":129,\"price\":24.62,\"likes\":33,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":25,\"name\":\"Beef - Flank Steak\",\"description\":\"lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam\",\"stock\":1,\"price\":31.75,\"likes\":54,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":29,\"name\":\"Bread - Raisin Walnut Pull\",\"description\":\"integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper\",\"stock\":62,\"price\":10.34,\"likes\":93,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":80,\"name\":\"Cake - Sheet Strawberry\",\"description\":\"mattis odio donec vitae nisi nam ultrices libero non mattis\",\"stock\":153,\"price\":41.38,\"likes\":66,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":66,\"name\":\"Celery\",\"description\":\"quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi\",\"stock\":59,\"price\":26.76,\"likes\":50,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":24,\"name\":\"Cheese - Grie Des Champ\",\"description\":\"ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam\",\"stock\":73,\"price\":36.68,\"likes\":27,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":39,\"name\":\"Cheese - Le Cheve Noir\",\"description\":\"integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla\",\"stock\":40,\"price\":43.57,\"likes\":8,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":14,\"name\":\"Coffee - Almond Amaretto\",\"description\":\"vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula\",\"stock\":102,\"price\":23.15,\"likes\":40,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"}],\"records\":51,\"pages\":6,\"current_page\":1}"
+						}
+					]
+				},
+				{
+					"name": "Get Products using order",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"first_name\":        \"Alexander \",\n\"last_name\": \"Sosa\",\n\"email\":       \"user@bar.com\",\n\"password\":     \"foo2018\",\n\"role_id\":       2,\n\"product_id\": 16,\n\"price\": 20,\n\"quantity\": 4\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/products/1/likes/desc",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"1",
+								"likes",
+								"desc"
+							]
+						},
+						"description": "Get products using order asc or desc"
+					},
+					"response": [
+						{
+							"id": "b3770d19-7ad5-481a-8d0c-21dbc3fb4bd7",
+							"name": "Get Products using order",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"first_name\":        \"Alexander \",\n\"last_name\": \"Sosa\",\n\"email\":       \"user@bar.com\",\n\"password\":     \"foo2018\",\n\"role_id\":       2,\n\"product_id\": 16,\n\"price\": 20,\n\"quantity\": 4\n}"
+								},
+								"url": {
+									"raw": "https://snack-store.herokuapp.com/api/v1/products/1/likes/desc",
+									"protocol": "https",
+									"host": [
+										"snack-store",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"1",
+										"likes",
+										"desc"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,content-type, x-access-token",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2884",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Apr 2018 04:00:42 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"b44-vu1iUA9ADbvf/QcR0lAWNDBUtAU\"",
+									"name": "Etag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "Cowboy",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur",
+									"name": "Via",
+									"description": "Informs the client of proxies through which the response was sent."
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"result\":[{\"id\":35,\"name\":\"Tart Shells - Savory, 3\",\"description\":\"augue vestibulum ante ipsum primis in faucibus orci luctus et\",\"stock\":48,\"price\":22.13,\"likes\":100,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":36,\"name\":\"Radish\",\"description\":\"interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus\",\"stock\":56,\"price\":31.1,\"likes\":100,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":67,\"name\":\"Cookies - Englishbay Oatmeal\",\"description\":\"rutrum rutrum neque aenean auctor gravida sem praesent id massa id\",\"stock\":121,\"price\":37.34,\"likes\":96,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":3,\"name\":\"Sping Loaded Cup Dispenser\",\"description\":\"nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros\",\"stock\":125,\"price\":14.29,\"likes\":94,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":29,\"name\":\"Bread - Raisin Walnut Pull\",\"description\":\"integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper\",\"stock\":62,\"price\":10.34,\"likes\":93,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":78,\"name\":\"Baking Powder\",\"description\":\"eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies\",\"stock\":15,\"price\":47.07,\"likes\":89,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":20,\"name\":\"Soup - Campbells Asian Noodle\",\"description\":\"nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros\",\"stock\":66,\"price\":14.61,\"likes\":88,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":84,\"name\":\"Wine - Lou Black Shiraz\",\"description\":\"vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla\",\"stock\":101,\"price\":28.93,\"likes\":82,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":54,\"name\":\"Halibut - Fletches\",\"description\":\"vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus\",\"stock\":63,\"price\":20.71,\"likes\":82,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":58,\"name\":\"Artichokes - Knobless, White\",\"description\":\"consequat ut nulla sed accumsan felis ut at dolor quis\",\"stock\":65,\"price\":13.42,\"likes\":81,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"}],\"records\":51,\"pages\":6,\"current_page\":\"1\"}"
+						}
+					]
+				},
+				{
+					"name": "Get Products using pagination",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"first_name\":        \"Alexander \",\n\"last_name\": \"Sosa\",\n\"email\":       \"user@bar.com\",\n\"password\":     \"foo2018\",\n\"role_id\":       2,\n\"product_id\": 16,\n\"price\": 20,\n\"quantity\": 4\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/products/5",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"5"
+							]
+						},
+						"description": "Get products using order asc or desc"
+					},
+					"response": [
+						{
+							"id": "da2a9637-558e-4b6d-8096-653c78b3d6f8",
+							"name": "Get Products using pagination",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"first_name\":        \"Alexander \",\n\"last_name\": \"Sosa\",\n\"email\":       \"user@bar.com\",\n\"password\":     \"foo2018\",\n\"role_id\":       2,\n\"product_id\": 16,\n\"price\": 20,\n\"quantity\": 4\n}"
+								},
+								"url": {
+									"raw": "https://snack-store.herokuapp.com/api/v1/products/5",
+									"protocol": "https",
+									"host": [
+										"snack-store",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,content-type, x-access-token",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2984",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Apr 2018 03:55:23 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"ba8-XHekB8wi5Bm8wYCQNWofqzeCNfc\"",
+									"name": "Etag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "Cowboy",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur",
+									"name": "Via",
+									"description": "Informs the client of proxies through which the response was sent."
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"result\":[{\"id\":3,\"name\":\"Sping Loaded Cup Dispenser\",\"description\":\"nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros\",\"stock\":125,\"price\":14.29,\"likes\":94,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":87,\"name\":\"Split Peas - Green, Dry\",\"description\":\"lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in\",\"stock\":48,\"price\":24.08,\"likes\":63,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":71,\"name\":\"Stock - Chicken, White\",\"description\":\"turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus\",\"stock\":93,\"price\":34.48,\"likes\":11,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":27,\"name\":\"Table Cloth 54x72 White\",\"description\":\"eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus\",\"stock\":180,\"price\":24.59,\"likes\":81,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":35,\"name\":\"Tart Shells - Savory, 3\",\"description\":\"augue vestibulum ante ipsum primis in faucibus orci luctus et\",\"stock\":48,\"price\":22.13,\"likes\":100,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":95,\"name\":\"Tea - Vanilla Chai\",\"description\":\"luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien\",\"stock\":131,\"price\":34.26,\"likes\":45,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":55,\"name\":\"Truffle Cups - Red\",\"description\":\"dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non\",\"stock\":97,\"price\":10.84,\"likes\":56,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":42,\"name\":\"Turkey Tenderloin Frozen\",\"description\":\"at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede\",\"stock\":149,\"price\":36.14,\"likes\":53,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":98,\"name\":\"V8 - Berry Blend\",\"description\":\"leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus\",\"stock\":56,\"price\":28.88,\"likes\":59,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":81,\"name\":\"Wine - Chianti Classico Riserva\",\"description\":\"ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac\",\"stock\":28,\"price\":42.95,\"likes\":51,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"}],\"records\":51,\"pages\":6,\"current_page\":\"5\"}"
+						}
+					]
+				},
+				{
+					"name": "Get Products using pagination and columns",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"first_name\":        \"Alexander \",\n\"last_name\": \"Sosa\",\n\"email\":       \"user@bar.com\",\n\"password\":     \"foo2018\",\n\"role_id\":       2,\n\"product_id\": 16,\n\"price\": 20,\n\"quantity\": 4\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/products/1/price",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"1",
+								"price"
+							]
+						},
+						"description": "Get products using order asc or desc, and column this could be price, name or like"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Products passing an id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"first_name\":        \"Alexander \",\n\"last_name\": \"Sosa\",\n\"email\":       \"user@bar.com\",\n\"password\":     \"foo2018\",\n\"role_id\":       2,\n\"product_id\": 16,\n\"price\": 20,\n\"quantity\": 4\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/product/1",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"1"
+							]
+						},
+						"description": "Get products with id"
+					},
+					"response": [
+						{
+							"id": "22b25dd8-af4d-4276-a6d5-07e6e646a19d",
+							"name": "Get Products passing an id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"first_name\":        \"Alexander \",\n\"last_name\": \"Sosa\",\n\"email\":       \"user@bar.com\",\n\"password\":     \"foo2018\",\n\"role_id\":       2,\n\"product_id\": 16,\n\"price\": 20,\n\"quantity\": 4\n}"
+								},
+								"url": {
+									"raw": "https://snack-store.herokuapp.com/api/v1/product/1",
+									"protocol": "https",
+									"host": [
+										"snack-store",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"product",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,content-type, x-access-token",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "251",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Apr 2018 03:57:21 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"fb-rs4XzEyVsDs3RVbhctRtWp3E3so\"",
+									"name": "Etag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "Cowboy",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur",
+									"name": "Via",
+									"description": "Informs the client of proxies through which the response was sent."
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"id\":1,\"name\":\"Lettuce - Romaine, Heart\",\"description\":\"massa donec dapibus duis at velit eu est congue elementum in hac\",\"stock\":26,\"price\":45.44,\"likes\":15,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T03:40:28.047Z\"}"
+						}
+					]
+				},
+				{
+					"name": "Get Products passing a name",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"first_name\":        \"Alexander \",\n\"last_name\": \"Sosa\",\n\"email\":       \"user@bar.com\",\n\"password\":     \"foo2018\",\n\"role_id\":       2,\n\"product_id\": 16,\n\"price\": 20,\n\"quantity\": 4\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/productByName/fee",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"productByName",
+								"fee"
+							]
+						},
+						"description": "Get products with name, the function search all records that contains the name "
+					},
+					"response": [
+						{
+							"id": "514d9dfe-7746-43e3-a941-ef98402842d8",
+							"name": "Get Products that contains the name \"Coffee\"",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"first_name\":        \"Alexander \",\n\"last_name\": \"Sosa\",\n\"email\":       \"user@bar.com\",\n\"password\":     \"foo2018\",\n\"role_id\":       2,\n\"product_id\": 16,\n\"price\": 20,\n\"quantity\": 4\n}"
+								},
+								"url": {
+									"raw": "https://snack-store.herokuapp.com/api/v1/productByName/Coffee",
+									"protocol": "https",
+									"host": [
+										"snack-store",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"productByName",
+										"Coffee"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,content-type, x-access-token",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "783",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Apr 2018 02:55:48 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"30f-08PM+BHC19lujEXRsydNJyq6qnY\"",
+									"name": "Etag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "Cowboy",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur",
+									"name": "Via",
+									"description": "Informs the client of proxies through which the response was sent."
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":14,\"name\":\"Coffee - Almond Amaretto\",\"description\":\"vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula\",\"stock\":102,\"price\":23.15,\"likes\":40,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":70,\"name\":\"Coffee - Egg Nog Capuccino\",\"description\":\"mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis\",\"stock\":157,\"price\":35.97,\"likes\":42,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"},{\"id\":100,\"name\":\"Coffee Cup 16oz Foam\",\"description\":\"luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh\",\"stock\":191,\"price\":26.58,\"likes\":67,\"status\":true,\"createdAt\":\"2018-04-30T02:37:17.774Z\",\"updatedAt\":\"2018-04-30T02:37:17.774Z\"}]"
+						}
+					]
+				},
+				{
+					"name": "Sign in",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n\t\"email\":       \"user@bar.com\",\n\t\"password\":     \"foo2018\"\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/users/sign_in",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"sign_in"
+							]
+						},
+						"description": "Sign in as an user, the petition return a json web token to be used in each request"
+					},
+					"response": []
+				},
+				{
+					"name": "Sign up",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\":\t\"Alexander\",\n\t\"lastName\": \t\"Sosa\",\n\t\"email\":    \t\"alexsfig@foo.com\",\n\t\"password\":     \"foo2018\"\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/users/sign_up",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"sign_up"
+							]
+						},
+						"description": "Sign up as an user, pass firstName, lastName, email and password"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authenticate user",
+			"description": "",
+			"item": [
+				{
+					"name": "Liking product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlX2lkIjoyLCJpYXQiOjE1MjUwNTg0OTgsImV4cCI6MTUyNTA3Mjg5OH0.nEa04b5NzkBjlSDS4ZTFtiAdrUv2jXM0SsNGWsUyKGo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/users/products/1/like",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"products",
+								"1",
+								"like"
+							]
+						},
+						"description": "Sign up as an user, pass firstName, lastName, email and password"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Line Items",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlX2lkIjoyLCJpYXQiOjE1MjUwNTg0OTgsImV4cCI6MTUyNTA3Mjg5OH0.nEa04b5NzkBjlSDS4ZTFtiAdrUv2jXM0SsNGWsUyKGo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"product_id\": 2,\n\t\"quantity\": 3\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/users/line_items",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"line_items"
+							]
+						},
+						"description": "add new line item, teh method check if not exits pendig order"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Line Items",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlX2lkIjoyLCJpYXQiOjE1MjUwNTg0OTgsImV4cCI6MTUyNTA3Mjg5OH0.nEa04b5NzkBjlSDS4ZTFtiAdrUv2jXM0SsNGWsUyKGo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"product_id\": 1,\n\t\"quantity\": 1\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/users/line_items/2",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"line_items",
+								"2"
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "1fdec1f5-d822-4d78-8756-c899c015a07e",
+							"name": "Purchase orders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									},
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlX2lkIjoyLCJpYXQiOjE1MjUwNTg0OTgsImV4cCI6MTUyNTA3Mjg5OH0.nEa04b5NzkBjlSDS4ZTFtiAdrUv2jXM0SsNGWsUyKGo",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"product_id\": 1,\n\t\"quantity\": 1\n}"
+								},
+								"url": {
+									"raw": "https://snack-store.herokuapp.com/api/v1/users/purchase_orders",
+									"protocol": "https",
+									"host": [
+										"snack-store",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"purchase_orders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,content-type, x-access-token",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "582",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Apr 2018 03:42:09 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"246-mU3k0u95Z3CELgl0Z7ix3gVx3zs\"",
+									"name": "Etag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "Cowboy",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur",
+									"name": "Via",
+									"description": "Informs the client of proxies through which the response was sent."
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"result\":[{\"id\":1,\"order_id\":\"b219cfaa-bc9a-414f-9e9d-7564f1d726cb\",\"total_amount\":0,\"status\":\"pending\",\"createdAt\":\"2018-04-30T03:27:02.396Z\",\"updatedAt\":\"2018-04-30T03:27:02.396Z\",\"line_items\":[{\"id\":1,\"product_id\":1,\"quantity\":39,\"total_line\":1772.16,\"price\":45.44,\"purchase_order_id\":1,\"createdAt\":\"2018-04-30T03:27:02.391Z\",\"updatedAt\":\"2018-04-30T03:27:02.391Z\"},{\"id\":3,\"product_id\":1,\"quantity\":1,\"total_line\":45.44,\"price\":45.44,\"purchase_order_id\":1,\"createdAt\":\"2018-04-30T03:37:35.016Z\",\"updatedAt\":\"2018-04-30T03:37:35.016Z\"}]}],\"records\":1,\"pages\":1,\"current_page\":1}"
+						}
+					]
+				},
+				{
+					"name": "Get all purchase order associated to user with pagination",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlX2lkIjoyLCJpYXQiOjE1MjUwNTg0OTgsImV4cCI6MTUyNTA3Mjg5OH0.nEa04b5NzkBjlSDS4ZTFtiAdrUv2jXM0SsNGWsUyKGo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"product_id\": 1,\n\t\"quantity\": 1\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/users/purchase_orders/1",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"purchase_orders",
+								"1"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get all purchase order associated to user with pagination",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlX2lkIjoyLCJpYXQiOjE1MjUwNTg0OTgsImV4cCI6MTUyNTA3Mjg5OH0.nEa04b5NzkBjlSDS4ZTFtiAdrUv2jXM0SsNGWsUyKGo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"product_id\": 1,\n\t\"quantity\": 1\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/users/purchase_orders/1",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"purchase_orders",
+								"1"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "complete purchase order status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlX2lkIjoyLCJpYXQiOjE1MjUwNTg0OTgsImV4cCI6MTUyNTA3Mjg5OH0.nEa04b5NzkBjlSDS4ZTFtiAdrUv2jXM0SsNGWsUyKGo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"product_id\": 1,\n\t\"quantity\": 1\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/users/purchase_order/2/completed",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"purchase_order",
+								"2",
+								"completed"
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "2b9b2a58-7a75-499d-8aa6-8eadd16c313e",
+							"name": "complete purchase order status no t found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									},
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlX2lkIjoyLCJpYXQiOjE1MjUwNTg0OTgsImV4cCI6MTUyNTA3Mjg5OH0.nEa04b5NzkBjlSDS4ZTFtiAdrUv2jXM0SsNGWsUyKGo",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"product_id\": 1,\n\t\"quantity\": 1\n}"
+								},
+								"url": {
+									"raw": "https://snack-store.herokuapp.com/api/v1/users/purchase_order/2/completed",
+									"protocol": "https",
+									"host": [
+										"snack-store",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"purchase_order",
+										"2",
+										"completed"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,content-type, x-access-token",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Apr 2018 04:02:00 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"25-0Nk+4EexzFpcDqzwNVNTqzA/AQ0\"",
+									"name": "Etag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "Cowboy",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur",
+									"name": "Via",
+									"description": "Informs the client of proxies through which the response was sent."
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"PurchaseOrder not found\"}"
+						}
+					]
+				},
+				{
+					"name": "canceled purchase order status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlX2lkIjoyLCJpYXQiOjE1MjUwNTg0OTgsImV4cCI6MTUyNTA3Mjg5OH0.nEa04b5NzkBjlSDS4ZTFtiAdrUv2jXM0SsNGWsUyKGo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"product_id\": 1,\n\t\"quantity\": 1\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/users/purchase_order/2/canceled",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"purchase_order",
+								"2",
+								"canceled"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get a purchase order by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlX2lkIjoyLCJpYXQiOjE1MjUwNTg0OTgsImV4cCI6MTUyNTA3Mjg5OH0.nEa04b5NzkBjlSDS4ZTFtiAdrUv2jXM0SsNGWsUyKGo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"product_id\": 1,\n\t\"quantity\": 1\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/users/purchase_order/1",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"purchase_order",
+								"1"
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "ac7a1cb4-c679-4b72-93cc-cb4f8a25fc65",
+							"name": "Get a purchase order by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									},
+									{
+										"key": "x-access-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlX2lkIjoyLCJpYXQiOjE1MjUwNTg0OTgsImV4cCI6MTUyNTA3Mjg5OH0.nEa04b5NzkBjlSDS4ZTFtiAdrUv2jXM0SsNGWsUyKGo",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"product_id\": 1,\n\t\"quantity\": 1\n}"
+								},
+								"url": {
+									"raw": "https://snack-store.herokuapp.com/api/v1/users/purchase_order/1",
+									"protocol": "https",
+									"host": [
+										"snack-store",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"purchase_order",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,content-type, x-access-token",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "498",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Apr 2018 04:21:29 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"1f2-3E7r1d7y2Py3hoJxhRKx16Tg/Oo\"",
+									"name": "Etag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "Cowboy",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur",
+									"name": "Via",
+									"description": "Informs the client of proxies through which the response was sent."
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"id\":1,\"order_id\":\"b219cfaa-bc9a-414f-9e9d-7564f1d726cb\",\"total_amount\":1817.6,\"status\":\"completed\",\"createdAt\":\"2018-04-30T03:27:02.396Z\",\"line_items\":[{\"id\":1,\"product_id\":1,\"quantity\":39,\"total_line\":1772.16,\"price\":45.44,\"purchase_order_id\":1,\"createdAt\":\"2018-04-30T03:27:02.391Z\",\"updatedAt\":\"2018-04-30T03:27:02.391Z\"},{\"id\":3,\"product_id\":1,\"quantity\":1,\"total_line\":45.44,\"price\":45.44,\"purchase_order_id\":1,\"createdAt\":\"2018-04-30T03:37:35.016Z\",\"updatedAt\":\"2018-04-30T03:37:35.016Z\"}]}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Authenticate admin",
+			"description": "",
+			"item": [
+				{
+					"name": "create products",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoxLCJpYXQiOjE1MjUwNjI0NDQsImV4cCI6MTUyNTA3Njg0NH0.VupQdbiUqBNOc81otob4j1BV-wklMQllaFLx0rdy2zQ"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":     \t\"Coffee monkey Donkey\",\n\t\"description\":\t\"coffee for monkeys\",\n\t\"stock\":    \t50,\n\t\"price\":    \t30.45\n\t\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/admin/products",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"products"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete products",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoxLCJpYXQiOjE1MjUwNjI0NDQsImV4cCI6MTUyNTA3Njg0NH0.VupQdbiUqBNOc81otob4j1BV-wklMQllaFLx0rdy2zQ"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":     \t\"Coffee monkey Donkey\",\n\t\"description\":\t\"coffee for monkeys\",\n\t\"stock\":    \t15,\n\t\"price\":    \t50\n\t\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/admin/products/101",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"products",
+								"101"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update products",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoxLCJpYXQiOjE1MjUwNjI0NDQsImV4cCI6MTUyNTA3Njg0NH0.VupQdbiUqBNOc81otob4j1BV-wklMQllaFLx0rdy2zQ"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":     \t\"Coffee monkey Donkey\",\n\t\"description\":\t\"coffee for monkeys\",\n\t\"stock\":    \t15,\n\t\"price\":    \t50\n\t\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/admin/products/101",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"products",
+								"101"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
