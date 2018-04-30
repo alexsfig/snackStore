@@ -3,31 +3,23 @@ const Product = require('../../models').Product;
 module.exports = {
 
 	create(req, res){
-		if(!req.is('application/json')){
+		data = req.body || {};
+		if(!data || Object.keys(data).length === 0){
 			res.status(403).send({
 				success: false,
-				message: 'Expected application/json'
+				message: 'Expected application/json data'
 			});
-		}else{
-			data = req.body || {};
-			if(!data || Object.keys(data).length === 0){
-				res.status(403).send({
-					success: false,
-					message: 'Expected application/json data'
-				});
-			}
-			else{
-				return Product.create({
-					name:        data.name,
-					description: data.description,
-					stock:       data.stock,
-					price:       data.price,
-					likes:       0
-				})
-				.then(product => res.status(201).send(product))
-				.catch(error => res.status(400).send(error));
-			}
-
+		}
+		else{
+			return Product.create({
+				name:        data.name,
+				description: data.description,
+				stock:       data.stock,
+				price:       data.price,
+				likes:       0
+			})
+			.then(product => res.status(201).send(product))
+			.catch(error => res.status(400).send(error));
 		}
 	},
 	// Retrieve all records using pagination and order
@@ -141,84 +133,69 @@ module.exports = {
 	},
 
 	update(req, res){
-		if(!req.is('application/json')){
-			res.status(403).send({
-				success: false,
-				message: "Expected application/json"
+		if(req.params.id){
+			Product.findById(req.params.id)
+			.then(product => {
+				if(!product){
+					res.status(404).send({
+						message: 'Product not found'
+					});
+				}
+				else if (product.status == false) {
+					res.status(404).send({
+						message: 'Product not found'
+					});
+				}
+				else{
+					data = req.body || {};
+					product.update({
+						name: data.name || product.name,
+						description: data.description || product.description,
+						stock: data.stock || product.stock,
+						price: data.price || product.price,
+						likes: data.likes || product.likes
+					})
+					.then(product => res.status(200).send(product))
+					.catch(error => res.status(400).send(error));
+				}
+			})
+			.catch(error => res.status(400).send(error));
+		}else{
+			res.status(404).send({
+				message: 'Product not found'
 			});
 		}
-		else{
-			if(req.params.id){
-				Product.findById(req.params.id)
-				.then(product => {
-					if(!product){
-						res.status(404).send({
-							message: 'Product not found'
-						});
-					}
-					else if (product.status == false) {
-						res.status(404).send({
-							message: 'Product not found'
-						});
-					}
-					else{
-						data = req.body || {};
-						product.update({
-							name: data.name || product.name,
-							description: data.description || product.description,
-							stock: data.stock || product.stock,
-							price: data.price || product.price,
-							likes: data.likes || product.likes
-						})
-						.then(product => res.status(200).send(product))
-						.catch(error => res.status(400).send(error));
-					}
-				})
-				.catch(error => res.status(400).send(error));
-			}else{
-				res.status(404).send({
-					message: 'Product not found'
-				});
-			}
-		}
+
 	},
 
 	like(req, res){
-		if(!req.is('application/json')){
-			res.status(403).send({
-				success: false,
-				message: "Expected application/json"
+		if(req.params.id){
+			Product.findById(req.params.id)
+			.then(product => {
+				if(!product){
+					res.status(404).send({
+						message: 'Product not found'
+					});
+				}
+				else if (product.status == false) {
+					res.status(404).send({
+						message: 'Product not found'
+					});
+				}
+				else{
+					data = req.body || {};
+					product.update({
+						likes: product.likes + 1
+					})
+					.then(product => res.status(200).send(product))
+					.catch(error => res.status(400).send(error));
+				}
+			})
+			.catch(error => res.status(400).send(error));
+		}else{
+			res.status(404).send({
+				message: 'Product not found'
 			});
-		}
-		else{
-			if(req.params.id){
-				Product.findById(req.params.id)
-				.then(product => {
-					if(!product){
-						res.status(404).send({
-							message: 'Product not found'
-						});
-					}
-					else if (product.status == false) {
-						res.status(404).send({
-							message: 'Product not found'
-						});
-					}
-					else{
-						data = req.body || {};
-						product.update({
-							likes: product.likes + 1
-						})
-						.then(product => res.status(200).send(product))
-						.catch(error => res.status(400).send(error));
-					}
-				})
-				.catch(error => res.status(400).send(error));
-			}else{
-				res.status(404).send({
-					message: 'Product not found'
-				});
-			}
 		}
 	},
 
