@@ -48,7 +48,10 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false
     },
 
-  }, {});
+  }, {
+    freezeTableName: true,
+    tableName: 'users'
+  });
   // function to compare passwdord
   User.prototype.comparePassword = function(password)
   {

@@ -1,14 +1,14 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  var Roles = sequelize.define('Roles', {
+  var Role = sequelize.define('Role', {
     name: DataTypes.STRING,
     descrition: DataTypes.STRING
   }, {
     freezeTableName: true,
     tableName: 'roles'
   });
-  Roles.associate = function(models) {
+  Role.associate = function(models) {
     // associations can be defined here
   };
-  return Roles;
+  return Role;
 };
