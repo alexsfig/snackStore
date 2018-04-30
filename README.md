@@ -48,10 +48,6 @@ All routes use the prefix **api/v1/**
 |Get |/productByName/:name          |Return a list with all product that match with name         |   name: complete or part of name  product          |
 |Post |/users/sign_in          |Login as a user           |   email, password          |
 |Post |/users/sign_up          |Sign up as a user          |   email, password, first name, last name          |
-|Get |/products/:order          |Return a list with all product ordered by name           |   order: ASC or DESC          |
-|Get |/products/:order          |Return a list with all product ordered by name           |   order: ASC or DESC          |
-|Get |/products/:order          |Return a list with all product ordered by name           |   order: ASC or DESC          |
-|Get |/products/:order          |Return a list with all product ordered by name           |   order: ASC or DESC          |
 
 Logged user routes, prefix **api/v1/users/**
 |**Verb**        |**Routes**                          |**Actions**                         |**Params**                         |
