@@ -20,9 +20,9 @@ Modifiy the file /server/config/config.json with your local credentials
 
 Run
 
-  sequelize db:create #to create the database
-	sequelize db:migration #to create table schema
-	sequelize db:seed:all #to populate the database
+  `sequelize db:create #to create the database`
+	`sequelize db:migration #to create table schema`
+	`sequelize db:seed:all #to populate the database`
 
 
 or just run
@@ -56,7 +56,7 @@ All routes use the prefix **api/v1/**
 |Post |/users/sign_in          |Login as a user           |   email, password          |
 |Post |/users/sign_up          |Sign up as a user          |   email, password, first name, last name          |
 
-## Those routes need to pass a header **x-access-token** in each petition, you can get it whit a petition to /users/sign_up, passing a valid access credentials
+This routes need to be use a header **x-access-token** in each petition, you can get it whit a petition to /users/sign_up
 
 Logged user routes, prefix **api/v1/users/**
 
