@@ -152,8 +152,11 @@ module.exports = {
 						purchase_order.line_items.forEach((product, index) => {
 						  total_amount += product.dataValues.total_line;
 						});
-						if (purchase_order.status == 'completed') {
-							res.status(400).send({error: "The purchase order has been canceled, you can change the status to completed"})
+						if (purchase_order.status == 'canceled') {
+							res.status(400).send({error: "The purchase order has been canceled, you can´t change the status to completed"})
+						}
+						else if (purchase_order.status == 'completed') {
+							res.status(400).send({error: "The purchase order has been completed"})
 						}
 						else{
 							purchase_order.update({
@@ -185,6 +188,9 @@ module.exports = {
 			if(req.params.id){
 				PurchaseOrder.findById(req.params.id, {
 					attributes: ['id', 'order_id', 'total_amount','status', 'createdAt', 'createdAt'],
+					include: [
+						{ model: LineItem, as: 'line_items' }
+					],
 				})
 				.then(purchase_order => {
 					if(!purchase_order){
@@ -199,7 +205,10 @@ module.exports = {
 						  total_amount += product.dataValues.total_line;
 						});
 						if (purchase_order.status == 'completed') {
-							res.status(400).send({error: "The purchase order has been completed, you can change the status to canceled"})
+							res.status(400).send({error: "The purchase order has been completed, you can´t change the status to canceled"})
+						}
+						else if (purchase_order.status == 'canceled') {
+							res.status(400).send({error: "The purchase order has been canceled"})
 						}
 						else{
 							purchase_order.update({
