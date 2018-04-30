@@ -152,12 +152,17 @@ module.exports = {
 						purchase_order.line_items.forEach((product, index) => {
 						  total_amount += product.dataValues.total_line;
 						});
-						purchase_order.update({
-							status: "completed",
-							total_amount: total_amount
-						})
-						.then(purchase_order => res.status(200).send(purchase_order))
-						.catch(error => res.status(400).send(error));
+						if (purchase_order.status == 'completed') {
+							res.status(400).send({error: "The purchase order has been canceled, you can change the status to completed"})
+						}
+						else{
+							purchase_order.update({
+								status: "completed",
+								total_amount: total_amount
+							})
+							.then(purchase_order => res.status(200).send(purchase_order))
+							.catch(error => res.status(400).send(error));
+						}
 					}
 				})
 				.catch(error => res.status(400).send(error));
@@ -189,15 +194,21 @@ module.exports = {
 					}
 					else{
 						data = req.body || {};
+						let total_amount = 0;
 						purchase_order.line_items.forEach((product, index) => {
 						  total_amount += product.dataValues.total_line;
 						});
-						purchase_order.update({
-							status: "completed",
-							total_amount: total_amount
-						})
-						.then(purchase_order => res.status(200).send(purchase_order))
-						.catch(error => res.status(400).send(error));
+						if (purchase_order.status == 'completed') {
+							res.status(400).send({error: "The purchase order has been completed, you can change the status to canceled"})
+						}
+						else{
+							purchase_order.update({
+								status: "canceled",
+								total_amount: total_amount
+							})
+							.then(purchase_order => res.status(200).send(purchase_order))
+							.catch(error => res.status(400).send(error));
+						}
 					}
 				})
 				.catch(error => res.status(400).send(error));
