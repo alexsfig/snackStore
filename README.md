@@ -1,4 +1,5 @@
 
+
 # Welcome to SnackStore
 
 
@@ -30,6 +31,8 @@ or just run
 > **Admin**
 > email: admin@foo.com
 > password: bar2018
+
+
 > **User**
 > email: user@bar.com
 > password: foo2018
@@ -50,6 +53,7 @@ All routes use the prefix **api/v1/**
 |Post |/users/sign_up          |Sign up as a user          |   email, password, first name, last name          |
 
 Logged user routes, prefix **api/v1/users/**
+
 |**Verb**        |**Routes**                          |**Actions**                         |**Params**                         |
 |----------------|-------------------------------|-----------------------------|-----------------------------|
 |Post|/products/:id/like           |Liking a product           | id: product id |
@@ -62,8 +66,10 @@ Logged user routes, prefix **api/v1/users/**
 |Delete|/line_items/:id      |Remove a line item       | product_id, quantity |
 
 Admin user routes, prefix **api/v1/admin/**
-|**Verb**        |**Routes**                          |**Actions**                         |**Params**                         |
+
+|**Verb**        |**Routes** |**Actions**|**Params**  |
 |----------------|-------------------------------|-----------------------------|-----------------------------|
 |Post|/products/         |Create a product           | id |
 |Delete|/products/:id        |delete a product           | id |
 |Put|/products/:id       |Update a product           | id |
+
