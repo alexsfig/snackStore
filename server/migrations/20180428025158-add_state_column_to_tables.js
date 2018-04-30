@@ -3,14 +3,14 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
 
-    queryInterface.addColumn('Products', 'status',
+    queryInterface.addColumn('products', 'status',
       {
         type: Sequelize.BOOLEAN,
         allowNull: false,
         defaultValue: true
       }
     );
-    queryInterface.addColumn('Users', 'status',
+    queryInterface.addColumn('users', 'status',
       {
         type: Sequelize.BOOLEAN,
         allowNull: false,
@@ -34,8 +34,8 @@ module.exports = {
       Example:
       return queryInterface.dropTable('users');
     */
-    queryInterface.removeColumn('Products', 'status');
-    queryInterface.removeColumn('Users', 'status');
+    queryInterface.removeColumn('products', 'status');
+    queryInterface.removeColumn('users', 'status');
     queryInterface.removeColumn('roles', 'status');
   }
 };

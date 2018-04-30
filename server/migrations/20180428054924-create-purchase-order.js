@@ -13,7 +13,7 @@ module.exports = {
         onDelete: 'RESTRICT',
         onUpdate: 'RESTRICT',
         references: {
-            model: 'Users',
+            model: 'users',
             key: 'id',
             as: 'user',
         },
