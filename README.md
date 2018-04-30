@@ -20,9 +20,11 @@ Modifiy the file /server/config/config.json with your local credentials
 
 Run
 
-  `sequelize db:create #to create the database`
-	`sequelize db:migration #to create table schema`
-	`sequelize db:seed:all #to populate the database`
+    sequelize db:create #to create the database
+  
+    sequelize db:migration #to create table schema
+	
+    sequelize db:seed:all #to populate the database
 
 
 or just run
