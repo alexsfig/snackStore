@@ -16,11 +16,14 @@ Steps
 
 # DB CONFIG
 
+Modifiy the file /server/config/config.json with your local credentials
+
 Run
 
-    sequelize db:create #to create the database
+  sequelize db:create #to create the database
 	sequelize db:migration #to create table schema
 	sequelize db:seed:all #to populate the database
+
 
 or just run
 
@@ -52,18 +55,21 @@ All routes use the prefix **api/v1/**
 |Post |/users/sign_in          |Login as a user           |   email, password          |
 |Post |/users/sign_up          |Sign up as a user          |   email, password, first name, last name          |
 
+## Those routes need to pass a header **x-access-token** in each petition, you can get it whit a petition to /users/sign_up, passing a valid access credentials
+
 Logged user routes, prefix **api/v1/users/**
 
 |**Verb**        |**Routes**                          |**Actions**                         |**Params**                         |
 |----------------|-------------------------------|-----------------------------|-----------------------------|
-|Post|/products/:id/like           |Liking a product           | id: product id |
+|Post|/product/:id/like           |Liking a product           | id: product id |
+|Post|/line_items/         |Create a line item       | product_id, quantity |
+|Delete|/line_items/:id      |Remove a line item       | product_id, quantity |
 |Get|/purchase_orders           |Return a list with all orders ordered by last update        | -- |
 |Get|/purchase_orders/:order         |Return a list with all orders with custom order        | order |
 |Get|/purchase_order/:id          |Return a  order       | id |
 |Post|/purchase_orders/:id/completed          |Change status order to completed     | id |
 |Post|/purchase_orders/:id/canceled         |Change status order to cancele       | id |
-|Post|/line_items/         |Create a line item       | product_id, quantity |
-|Delete|/line_items/:id      |Remove a line item       | product_id, quantity |
+
 
 Admin user routes, prefix **api/v1/admin/**
 
@@ -72,4 +78,3 @@ Admin user routes, prefix **api/v1/admin/**
 |Post|/products/         |Create a product           | id |
 |Delete|/products/:id        |delete a product           | id |
 |Put|/products/:id       |Update a product           | id |
-

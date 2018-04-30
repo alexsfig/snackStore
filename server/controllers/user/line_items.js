@@ -68,10 +68,10 @@ module.exports = {
 								else{
 									return LineItem.create(
 										{
-											product_id:         data.product_id,
-											price:              data.price,
-											total_line:         data.quantity * data.price,
-											quantity:           data.quantity,
+											product_id:         product.id,
+											price:              product.price,
+											total_line:         total_line: data.quantity * product.price,
+											quantity:   				data.quantity,
 											purchase_order_id: purchaseOrder.id
 										}
 									)
