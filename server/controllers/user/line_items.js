@@ -70,7 +70,7 @@ module.exports = {
 										{
 											product_id:         product.id,
 											price:              product.price,
-											total_line:         total_line: data.quantity * product.price,
+											total_line:         data.quantity * product.price,
 											quantity:   				data.quantity,
 											purchase_order_id: purchaseOrder.id
 										}
