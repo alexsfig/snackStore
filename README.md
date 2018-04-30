@@ -48,8 +48,9 @@ All routes use the prefix **api/v1/**
 |**Verb**        |**Routes**                          |**Actions**                         |**Params**                         |
 |----------------|-------------------------------|-----------------------------|-----------------------------|
 |Get|/products            |Return a list with all product ordered by name ASC            | -- |
-|Get |/products/:order          |Return a list with all product ordered by name           |   order: ASC or DESC          |
-|Get |/products/:order/:orderColumn         |Return a list with all product ordered by specific column         |   order: ASC or DESC, orderColumn: name, like, price, stock          |
+|Get|/products/:page           |Return a list with all product ordered by name ASC            | page number |
+|Get |/products/:page/:orderColumn          |Return a list with all product ordered by name           |  page number, order: ASC or DESC          |
+|Get |/products/:page/:orderColumn/:order       |Return a list with all product ordered by specific column         | page number,  order: ASC or DESC, orderColumn: name, like, price, stock          |
 |Get |/products/:id          |Return a product by id           |   id          |
 |Get |/productByName/:name          |Return a list with all product that match with name         |   name: complete or part of name  product          |
 |Post |/users/sign_in          |Login as a user           |   email, password          |
@@ -65,7 +66,8 @@ Logged user routes, prefix **api/v1/users/**
 |Post|/line_items/         |Create a line item       | product_id, quantity |
 |Delete|/line_items/:id      |Remove a line item       | product_id, quantity |
 |Get|/purchase_orders           |Return a list with all orders ordered by last update        | -- |
-|Get|/purchase_orders/:order         |Return a list with all orders with custom order        | order |
+|Get|/purchase_orders/:page         |Return a list with all orders with custom order        | page |
+|Get|/purchase_orders/:page/:order         |Return a list with all orders with custom order        | page, order |
 |Get|/purchase_order/:id          |Return a  order       | id |
 |Post|/purchase_orders/:id/completed          |Change status order to completed     | id |
 |Post|/purchase_orders/:id/canceled         |Change status order to cancele       | id |

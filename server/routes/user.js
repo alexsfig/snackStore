@@ -62,7 +62,8 @@ module.exports = (app, jwt, express) =>
     apiRoutes.post('/purchase_order/:id/completed', purchaseOrderController.completed)
     apiRoutes.post('/purchase_order/:id/canceled', purchaseOrderController.canceled)
     apiRoutes.get('/purchase_orders', purchaseOrderController.list)
-    apiRoutes.get('/purchase_orders/:order', purchaseOrderController.list)
+    apiRoutes.get('/purchase_orders/:page', purchaseOrderController.list)
+    apiRoutes.get('/purchase_orders/:page/:order', purchaseOrderController.list)
     apiRoutes.post('/line_items', lineItemsController.create)
     apiRoutes.delete('/line_items/:id', lineItemsController.delete)
 

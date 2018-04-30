@@ -7,8 +7,9 @@ module.exports = (app, jwt, express) =>
 
 
     apiRoutes.get('/products', productsController.list)
-    apiRoutes.get('/products/:order', productsController.list)
-    apiRoutes.get('/products/:order/:orderColumn', productsController.list)
+    apiRoutes.get('/products/:page', productsController.list)
+    apiRoutes.get('/products/:page/:orderColumn', productsController.list)
+    apiRoutes.get('/products/:page/:orderColumn/:order', productsController.list)
     apiRoutes.get('/product/:id', productsController.find)
     apiRoutes.get('/productByName/:name', productsController.findByName)
     apiRoutes.post('/users/sign_in', usersController.login)
