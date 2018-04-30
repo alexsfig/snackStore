@@ -1,0 +1,22 @@
+{
+    "development": {
+        "username": "",
+        "password": "",
+        "database": "snack_store_dev",
+        "host": "localhost",
+        "port": 5432,
+        "dialect": "postgres"
+    },
+    "test": {
+        "username": "",
+        "password": "",
+        "database": "snack_store_test",
+        "host": "localhost",
+        "port": 5432,
+        "dialect": "postgres"
+    },
+    "production": {
+        "use_env_variable": "DATABASE_URL",
+        "dialect": "postgres"
+    }
+}
