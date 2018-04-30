@@ -21,7 +21,7 @@ module.exports = {
         lastName: req.body.lastName,
         password: req.body.password || "welcome2017",
       })
-      .then(user => res.status(201).send("User has been created"))
+      .then(user => res.status(201).send({result: "User has been created"}))
       .catch(error => res.status(400).send(error));
     }
   },
