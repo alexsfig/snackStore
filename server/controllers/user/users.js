@@ -17,11 +17,11 @@ module.exports = {
       return User.create({
         role_id: 2,
         email: req.body.email,
-        firstName: req.body.first_name,
-        lastName: req.body.last_name,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
         password: req.body.password || "welcome2017",
       })
-      .then(user => res.status(201).send(user))
+      .then(user => res.status(201).send("User has been created"))
       .catch(error => res.status(400).send(error));
     }
   },
