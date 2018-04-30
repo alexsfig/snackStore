@@ -8,7 +8,10 @@
   },
   "scripts": {
     "start": "node bin/www.js",
-    "test": "mocha --timeout 10000"
+    "test": "mocha --timeout 10000",
+    "global-snack": "npm install -g sequelize sequelize-cli pg && echo 'Global Package for snackStore has been installed.'",
+    "db-snack": "sequelize db:create && sequelize db:migrate && sequelize db:seed:all &&  echo 'Database set'"
+
   },
   "apidoc": {
     "title": "Users API",
