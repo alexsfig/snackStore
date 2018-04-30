@@ -56,6 +56,7 @@ module.exports = (app, jwt, express) =>
     });
     apiRoutes.post('/products', productsController.create)
     apiRoutes.delete('/products/:id', productsController.delete)
+    apiRoutes.put('/products/:id', productsController.update)
 
 
 

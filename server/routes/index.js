@@ -11,7 +11,6 @@ module.exports = (app, jwt, express) =>
     apiRoutes.get('/products/:order/:orderColumn', productsController.list)
     apiRoutes.get('/product/:id', productsController.find)
     apiRoutes.get('/productByName/:name', productsController.findByName)
-    apiRoutes.put('/products/:id', productsController.update)
     apiRoutes.post('/users/sign_in', usersController.login)
     apiRoutes.post('/users/sign_up', usersController.create)
 

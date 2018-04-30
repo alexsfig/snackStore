@@ -56,7 +56,7 @@ module.exports = (app, jwt, express) =>
       }
     });
     apiRoutes.post('/products/:id/like', productsController.like)
-    
+
     apiRoutes.post('/purchase_orders', purchaseOrderController.create)
     apiRoutes.get('/purchase_order/:id', purchaseOrderController.find)
     apiRoutes.post('/purchase_order/:id/completed', purchaseOrderController.completed)
