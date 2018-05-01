@@ -38,7 +38,7 @@ module.exports = {
 	// Retrieve all records using pagination and order
 	list(req, res){
 		// Number of records for page
-		let limit = 10;
+		let limit = 12;
   	let offset = 0;
 		const token = req.body.token || req.query.token || req.headers['x-access-token'];
 		var decoded = jwt.decode(token, {complete: true});
