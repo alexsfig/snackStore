@@ -43,7 +43,7 @@
 					},
 					"response": [
 						{
-							"id": "5b774d88-7449-4317-b9c5-08effb5fc743",
+							"id": "0665086e-0f79-4c82-96b3-9a1cd8f48e17",
 							"name": "Get Products",
 							"originalRequest": {
 								"method": "GET",
@@ -191,7 +191,7 @@
 					},
 					"response": [
 						{
-							"id": "b3770d19-7ad5-481a-8d0c-21dbc3fb4bd7",
+							"id": "f6da6687-70b0-45d5-b447-487ca8f2ec6d",
 							"name": "Get Products using order",
 							"originalRequest": {
 								"method": "GET",
@@ -339,7 +339,7 @@
 					},
 					"response": [
 						{
-							"id": "da2a9637-558e-4b6d-8096-653c78b3d6f8",
+							"id": "9c31fdc1-de82-411a-96b3-d859814819c9",
 							"name": "Get Products using pagination",
 							"originalRequest": {
 								"method": "GET",
@@ -519,7 +519,7 @@
 					},
 					"response": [
 						{
-							"id": "22b25dd8-af4d-4276-a6d5-07e6e646a19d",
+							"id": "ffa10e9f-0293-4cba-a003-759598ff94fc",
 							"name": "Get Products passing an id",
 							"originalRequest": {
 								"method": "GET",
@@ -665,7 +665,7 @@
 					},
 					"response": [
 						{
-							"id": "514d9dfe-7746-43e3-a941-ef98402842d8",
+							"id": "23c08341-b40b-413d-a1b9-5915fe409e63",
 							"name": "Get Products that contains the name \"Coffee\"",
 							"originalRequest": {
 								"method": "GET",
@@ -790,7 +790,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\n\t\"email\":       \"user@bar.com\",\n\t\"password\":     \"foo2018\"\n}"
+							"raw": "{\n\n\t\"email\":       \"admin@foo.com\",\n\t\"password\":     \"bar2018\"\n}"
 						},
 						"url": {
 							"raw": "https://snack-store.herokuapp.com/api/v1/users/sign_in",
@@ -861,7 +861,7 @@
 							},
 							{
 								"key": "x-access-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlX2lkIjoyLCJpYXQiOjE1MjUwNTg0OTgsImV4cCI6MTUyNTA3Mjg5OH0.nEa04b5NzkBjlSDS4ZTFtiAdrUv2jXM0SsNGWsUyKGo"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlX2lkIjoyLCJpYXQiOjE1MjUwNzM1MDMsImV4cCI6MTUyNTA4NzkwM30.SK8wTAxIPS2J94TaGKHMF1BFeeWhxBSbrXfTGVMl-j0"
 							}
 						],
 						"body": {
@@ -869,7 +869,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://snack-store.herokuapp.com/api/v1/users/products/1/like",
+							"raw": "https://snack-store.herokuapp.com/api/v1/users/products/58/like",
 							"protocol": "https",
 							"host": [
 								"snack-store",
@@ -881,7 +881,7 @@
 								"v1",
 								"users",
 								"products",
-								"1",
+								"58",
 								"like"
 							]
 						},
@@ -964,7 +964,7 @@
 					},
 					"response": [
 						{
-							"id": "1fdec1f5-d822-4d78-8756-c899c015a07e",
+							"id": "53d0cee6-0948-4e00-b28a-1ea448ee31e9",
 							"name": "Purchase orders",
 							"originalRequest": {
 								"method": "GET",
@@ -1197,7 +1197,7 @@
 					},
 					"response": [
 						{
-							"id": "2b9b2a58-7a75-499d-8aa6-8eadd16c313e",
+							"id": "b98e0efb-f4da-4413-91fe-44cbd34a2569",
 							"name": "complete purchase order status no t found",
 							"originalRequest": {
 								"method": "POST",
@@ -1394,7 +1394,7 @@
 					},
 					"response": [
 						{
-							"id": "ac7a1cb4-c679-4b72-93cc-cb4f8a25fc65",
+							"id": "f6b3fa12-4cf4-4117-82a9-a8e35628b38e",
 							"name": "Get a purchase order by id",
 							"originalRequest": {
 								"method": "GET",
@@ -1605,15 +1605,15 @@
 							},
 							{
 								"key": "x-access-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoxLCJpYXQiOjE1MjUwNjI0NDQsImV4cCI6MTUyNTA3Njg0NH0.VupQdbiUqBNOc81otob4j1BV-wklMQllaFLx0rdy2zQ"
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoxLCJpYXQiOjE1MjUxMzk5OTQsImV4cCI6MTUyNTE1NDM5NH0.SiRhryAMNCkw_Mr0SnJ4BqHc1pEprKef0QDGeWaU-f4"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\":     \t\"Coffee monkey Donkey\",\n\t\"description\":\t\"coffee for monkeys\",\n\t\"stock\":    \t15,\n\t\"price\":    \t50\n\t\n}"
+							"raw": "{\n\t\"name\":     \t\"Coffee monkey Donkey\",\n\t\"description\":\t\"coffee for monkeys\",\n\t\"stock\":    \t15,\n\t\"price\":    \t32\n\t\n}"
 						},
 						"url": {
-							"raw": "https://snack-store.herokuapp.com/api/v1/admin/products/101",
+							"raw": "https://snack-store.herokuapp.com/api/v1/admin/products/25",
 							"protocol": "https",
 							"host": [
 								"snack-store",
@@ -1625,7 +1625,45 @@
 								"v1",
 								"admin",
 								"products",
-								"101"
+								"25"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get product with log",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlX2lkIjoxLCJpYXQiOjE1MjUxMzk5OTQsImV4cCI6MTUyNTE1NDM5NH0.SiRhryAMNCkw_Mr0SnJ4BqHc1pEprKef0QDGeWaU-f4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":     \t\"Coffee monkey Donkey\",\n\t\"description\":\t\"coffee for monkeys\",\n\t\"stock\":    \t50,\n\t\"price\":    \t31.45\n\t\n}"
+						},
+						"url": {
+							"raw": "https://snack-store.herokuapp.com/api/v1/admin/products/25",
+							"protocol": "https",
+							"host": [
+								"snack-store",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"products",
+								"25"
 							]
 						},
 						"description": ""

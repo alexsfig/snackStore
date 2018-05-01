@@ -2,6 +2,7 @@
 
 # Welcome to SnackStore
 
+> You can see how it works in http://alexsfig.com/snackStore/
 
 > This API has been developed using EXPRESS JS
 
