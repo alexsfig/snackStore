@@ -32,10 +32,10 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   Product.associate = function(models) {
-    Product.hasMany(models.PurchaseOrder,
+    Product.hasMany(models.LogProduct,
     {
-      foreignKey: 'purchase_order_id',
-      as: 'purchase_order',
+      foreignKey: 'product_id',
+      as: 'log_products',
     });
   };
   return Product;

@@ -40,7 +40,6 @@ module.exports = (app, jwt, express) =>
                   message: 'Authentication failed, non admin user.'
                 });
               }
-
             }
           });
         }
@@ -57,11 +56,6 @@ module.exports = (app, jwt, express) =>
     apiRoutes.post('/products', productsController.create)
     apiRoutes.delete('/products/:id', productsController.delete)
     apiRoutes.put('/products/:id', productsController.update)
-
-
-
-
-
+    apiRoutes.get('/products/:id', productsController.findWithLog)
     app.use('/api/v1/admin', apiRoutes);
-
 };

@@ -1,4 +1,5 @@
 const Product = require('../../models').Product;
+const LogProduct = require('../../models').LogProduct;
 
 module.exports = {
 
@@ -98,6 +99,35 @@ module.exports = {
 			});
 		}
 	},
+	findWithLog(req, res){
+		if(req.params.id){
+			Product.findById(req.params.id, {
+				include: [
+					{ model: LogProduct, as: 'log_products' }
+				],
+			})
+			.then(product => {
+				if(!product){
+					res.status(404).send({
+						message: 'Product not found'
+					});
+				}
+				else if (product.status == false) {
+					res.status(404).send({
+						message: 'Product not found'
+					});
+				}
+				else{
+					res.status(200).send(product);
+				}
+			})
+			.catch(error => res.status(400).send(error));
+		}else{
+			res.status(404).send({
+				message: 'Product not found'
+			});
+		}
+	},
 	// find product by name, return a list of records
 	findByName(req, res){
 		if(req.params.name){
@@ -148,14 +178,28 @@ module.exports = {
 				}
 				else{
 					data = req.body || {};
-					product.update({
+					const previous_price = product.price
+					return product.update({
 						name: data.name || product.name,
 						description: data.description || product.description,
 						stock: data.stock || product.stock,
 						price: data.price || product.price,
 						likes: data.likes || product.likes
 					})
-					.then(product => res.status(200).send(product))
+					.then(product => {
+						if (data.price != previous_price) {
+							return LogProduct.create({
+								product_id: product.id,
+								previous_price: previous_price,
+								new_price: data.price
+							}).then(product_log => res.status(200).send(product))
+							.catch(error => res.status(400).send(error));
+						}
+						else{
+							res.status(200).send(product)
+
+						}
+					})
 					.catch(error => res.status(400).send(error));
 				}
 			})

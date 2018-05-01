@@ -21,9 +21,9 @@ Modifiy the file /server/config/config.json with your local credentials
 Run
 
     sequelize db:create #to create the database
-  
+
     sequelize db:migration #to create table schema
-	
+
     sequelize db:seed:all #to populate the database
 
 
@@ -82,3 +82,4 @@ Admin user routes, prefix **api/v1/admin/**
 |Post|/products/         |Create a product           | id |
 |Delete|/products/:id        |delete a product           | id |
 |Put|/products/:id       |Update a product           | id |
+|Get|/products/:id       |Get a product with log price           | id |
